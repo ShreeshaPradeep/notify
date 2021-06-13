@@ -11,7 +11,7 @@ def notifyMe(title,message):
         timeout = 10,
         )
 if __name__ == '__main__':
-    while(True):
+   
 
         notifyMe("Hey hurry up !!","Book your slots")
-        time.sleep(5)
+        
