@@ -40,8 +40,7 @@ def notifyMe(title,message):
         )
 
 while(findAvailability()!=True):
-    if __name__ == '__main__':
-        notifyMe("oops :( !!!", "No available slots to book")
+    
     time.sleep(20)
     findAvailability()
 
