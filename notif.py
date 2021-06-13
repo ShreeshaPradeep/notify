@@ -10,7 +10,7 @@ state = input("Enter Your State Name : ")
 print("\n")
 dis = input("Enter Your District Name : ")
 print("\n")
-date = input("Enter Sate In The Format  DD-MM-YYYY:\n> ")
+date = input("Enter Date In The Format  DD-MM-YYYY:\n> ")
 print("\n")
 age = int(input("Enter Your Age As :\n If 18 and above Enter as 18 \n If 45 and above Enter as 45 \n >  "))
 print("\n")
@@ -56,14 +56,14 @@ def findAvailability():
     for each in data:
         if ((each["available_capacity"]>0)&(each["min_age_limit"]==age)):
             counter +=1
-            print(each["name"])
-            print(each["pincode"])
-            print(each["vaccine"])
-            print(each["available_capacity"])
+            print("Center Name : ",each["name"])
+            print("Pincode : ",each["pincode"])
+            print("Vaccine Name : ",each["vaccine"])
+            print("Available Capacity : ",each["available_capacity"])
             print("\n")
             return True
     if(counter == 0):
-        print("no Available Slots\n")
+        print("No Slots Available \n")
         return False
 
 
@@ -77,7 +77,7 @@ def notifyMe(title,message):
 
 while(findAvailability()!=True):
 
-    time.sleep(2)
+    time.sleep(1)
     findAvailability()
 
 while(findAvailability()==True):
@@ -86,8 +86,6 @@ while(findAvailability()==True):
 
     time.sleep(10)
     findAvailability()
-
-
 
 
 
